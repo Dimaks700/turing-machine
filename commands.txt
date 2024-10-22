@@ -1,0 +1,22 @@
+4 5
+abc^
+a,L,2
+b,L,3
+c,L,4
+^,N,!
+x
+x
+x
+a,R,5
+x
+x
+x
+b,R,5
+x
+x
+x
+c,R,5
+a,N,!
+a,N,!
+a,N,!
+x

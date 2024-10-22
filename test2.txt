@@ -1,0 +1,1921 @@
+call main
+err = int:[0]
+call fopen( tasks/task6_word1.txt, r )
+fopen: Success
+word_file = FILE:[file]
+return from fopen
+call fopen( tasks/task6_commands.txt, r )
+fopen: Success
+prog_file = FILE:[file]
+return from fopen
+call make_tape_for_word
+40 bytes allocated in tape_ptr
+*tape_center_ptr = string:[bab]
+return from make_tape_for_word
+Input word: bab
+call check_prog_size
+width = int:[4]
+height = int:[8]
+return from check_prog_size
+call make_arr
+return from make_arr
+call get_alphabet
+alphabet = string:[ab^=]
+return from get_alphabet
+call parse_commands
+5 chars in a,N,2
+i = 0, j = 0
+(*machine_prog)[i][j][0] = char:[a]
+(*machine_prog)[i][j][1] = char:[N]
+(*machine_prog)[i][j][2] = char:[2]
+(*machine_prog)[i][j][3] = char:[\0]
+5 chars in b,N,2
+i = 0, j = 1
+(*machine_prog)[i][j][0] = char:[b]
+(*machine_prog)[i][j][1] = char:[N]
+(*machine_prog)[i][j][2] = char:[2]
+(*machine_prog)[i][j][3] = char:[\0]
+5 chars in ^,N,!
+i = 0, j = 2
+(*machine_prog)[i][j][0] = char:[^]
+(*machine_prog)[i][j][1] = char:[N]
+(*machine_prog)[i][j][2] = char:[0]
+(*machine_prog)[i][j][3] = char:[\0]
+1 chars in x
+i = 0, j = 3
+(*machine_prog)[i][j][0] = char:[x]
+(*machine_prog)[i][j][1] = char:[\0]
+5 chars in a,R,2
+i = 1, j = 0
+(*machine_prog)[i][j][0] = char:[a]
+(*machine_prog)[i][j][1] = char:[R]
+(*machine_prog)[i][j][2] = char:[2]
+(*machine_prog)[i][j][3] = char:[\0]
+5 chars in b,R,2
+i = 1, j = 1
+(*machine_prog)[i][j][0] = char:[b]
+(*machine_prog)[i][j][1] = char:[R]
+(*machine_prog)[i][j][2] = char:[2]
+(*machine_prog)[i][j][3] = char:[\0]
+5 chars in =,L,3
+i = 1, j = 2
+(*machine_prog)[i][j][0] = char:[=]
+(*machine_prog)[i][j][1] = char:[L]
+(*machine_prog)[i][j][2] = char:[3]
+(*machine_prog)[i][j][3] = char:[\0]
+1 chars in x
+i = 1, j = 3
+(*machine_prog)[i][j][0] = char:[x]
+(*machine_prog)[i][j][1] = char:[\0]
+5 chars in a,L,3
+i = 2, j = 0
+(*machine_prog)[i][j][0] = char:[a]
+(*machine_prog)[i][j][1] = char:[L]
+(*machine_prog)[i][j][2] = char:[3]
+(*machine_prog)[i][j][3] = char:[\0]
+5 chars in b,L,3
+i = 2, j = 1
+(*machine_prog)[i][j][0] = char:[b]
+(*machine_prog)[i][j][1] = char:[L]
+(*machine_prog)[i][j][2] = char:[3]
+(*machine_prog)[i][j][3] = char:[\0]
+5 chars in ^,R,4
+i = 2, j = 2
+(*machine_prog)[i][j][0] = char:[^]
+(*machine_prog)[i][j][1] = char:[R]
+(*machine_prog)[i][j][2] = char:[4]
+(*machine_prog)[i][j][3] = char:[\0]
+5 chars in =,L,3
+i = 2, j = 3
+(*machine_prog)[i][j][0] = char:[=]
+(*machine_prog)[i][j][1] = char:[L]
+(*machine_prog)[i][j][2] = char:[3]
+(*machine_prog)[i][j][3] = char:[\0]
+5 chars in ^,R,5
+i = 3, j = 0
+(*machine_prog)[i][j][0] = char:[^]
+(*machine_prog)[i][j][1] = char:[R]
+(*machine_prog)[i][j][2] = char:[5]
+(*machine_prog)[i][j][3] = char:[\0]
+5 chars in ^,R,6
+i = 3, j = 1
+(*machine_prog)[i][j][0] = char:[^]
+(*machine_prog)[i][j][1] = char:[R]
+(*machine_prog)[i][j][2] = char:[6]
+(*machine_prog)[i][j][3] = char:[\0]
+1 chars in x
+i = 3, j = 2
+(*machine_prog)[i][j][0] = char:[x]
+(*machine_prog)[i][j][1] = char:[\0]
+5 chars in ^,R,!
+i = 3, j = 3
+(*machine_prog)[i][j][0] = char:[^]
+(*machine_prog)[i][j][1] = char:[R]
+(*machine_prog)[i][j][2] = char:[0]
+(*machine_prog)[i][j][3] = char:[\0]
+5 chars in a,R,5
+i = 4, j = 0
+(*machine_prog)[i][j][0] = char:[a]
+(*machine_prog)[i][j][1] = char:[R]
+(*machine_prog)[i][j][2] = char:[5]
+(*machine_prog)[i][j][3] = char:[\0]
+5 chars in b,R,5
+i = 4, j = 1
+(*machine_prog)[i][j][0] = char:[b]
+(*machine_prog)[i][j][1] = char:[R]
+(*machine_prog)[i][j][2] = char:[5]
+(*machine_prog)[i][j][3] = char:[\0]
+5 chars in a,R,7
+i = 4, j = 2
+(*machine_prog)[i][j][0] = char:[a]
+(*machine_prog)[i][j][1] = char:[R]
+(*machine_prog)[i][j][2] = char:[7]
+(*machine_prog)[i][j][3] = char:[\0]
+5 chars in =,R,5
+i = 4, j = 3
+(*machine_prog)[i][j][0] = char:[=]
+(*machine_prog)[i][j][1] = char:[R]
+(*machine_prog)[i][j][2] = char:[5]
+(*machine_prog)[i][j][3] = char:[\0]
+5 chars in a,R,6
+i = 5, j = 0
+(*machine_prog)[i][j][0] = char:[a]
+(*machine_prog)[i][j][1] = char:[R]
+(*machine_prog)[i][j][2] = char:[6]
+(*machine_prog)[i][j][3] = char:[\0]
+5 chars in b,R,6
+i = 5, j = 1
+(*machine_prog)[i][j][0] = char:[b]
+(*machine_prog)[i][j][1] = char:[R]
+(*machine_prog)[i][j][2] = char:[6]
+(*machine_prog)[i][j][3] = char:[\0]
+5 chars in b,R,8
+i = 5, j = 2
+(*machine_prog)[i][j][0] = char:[b]
+(*machine_prog)[i][j][1] = char:[R]
+(*machine_prog)[i][j][2] = char:[8]
+(*machine_prog)[i][j][3] = char:[\0]
+5 chars in =,R,6
+i = 5, j = 3
+(*machine_prog)[i][j][0] = char:[=]
+(*machine_prog)[i][j][1] = char:[R]
+(*machine_prog)[i][j][2] = char:[6]
+(*machine_prog)[i][j][3] = char:[\0]
+5 chars in a,L,3
+i = 6, j = 0
+(*machine_prog)[i][j][0] = char:[a]
+(*machine_prog)[i][j][1] = char:[L]
+(*machine_prog)[i][j][2] = char:[3]
+(*machine_prog)[i][j][3] = char:[\0]
+1 chars in x
+i = 6, j = 1
+(*machine_prog)[i][j][0] = char:[x]
+(*machine_prog)[i][j][1] = char:[\0]
+5 chars in a,L,7
+i = 6, j = 2
+(*machine_prog)[i][j][0] = char:[a]
+(*machine_prog)[i][j][1] = char:[L]
+(*machine_prog)[i][j][2] = char:[7]
+(*machine_prog)[i][j][3] = char:[\0]
+1 chars in x
+i = 6, j = 3
+(*machine_prog)[i][j][0] = char:[x]
+(*machine_prog)[i][j][1] = char:[\0]
+1 chars in x
+i = 7, j = 0
+(*machine_prog)[i][j][0] = char:[x]
+(*machine_prog)[i][j][1] = char:[\0]
+5 chars in b,L,3
+i = 7, j = 1
+(*machine_prog)[i][j][0] = char:[b]
+(*machine_prog)[i][j][1] = char:[L]
+(*machine_prog)[i][j][2] = char:[3]
+(*machine_prog)[i][j][3] = char:[\0]
+5 chars in b,L,8
+i = 7, j = 2
+(*machine_prog)[i][j][0] = char:[b]
+(*machine_prog)[i][j][1] = char:[L]
+(*machine_prog)[i][j][2] = char:[8]
+(*machine_prog)[i][j][3] = char:[\0]
+1 chars in x
+i = 7, j = 3
+(*machine_prog)[i][j][0] = char:[x]
+(*machine_prog)[i][j][1] = char:[\0]
+return from parse_commands
+call print_prog
+return from print_prog
+call execute_prog
+status = int:[0]
+prog_end = int:[0]
+current_word_index = int:[0]
+first_word_index = int:[0]
+call get_current_symbol
+symbol = char:[b] - 98 ascii
+word = b , symbol = b
+return from get_current_symbol
+call get_current_command_index
+j = 0, alphabet[j] = a, symbol = b
+j = 1, alphabet[j] = b, symbol = b
+command_index = int:[1]
+return from get_current_command_index
+current_command_index = int:[1]
+TEST 0 1
+current_prog = char *[bN2]
+call write_new_symbol
+(**word)[0 (current_word_index)] = char:[b]
+return from write_new_symbol
+call move_head
+move_instruction = char:[N]
+*current_word_index = int:[0]
+return from move_head
+call change_status
+TEST status_value = int[2], current_prog[2] = char[2], ascii current_prog[2] =[50]
+command_status = int:[1]
+*status = int:[1]
+return from change_status
+call print_word
+char *word_start_ptr = char *[bab]
+Word: bab
+return from print_word
+symbol = b , current_prog = bN2 , current_word_index = 0 , status = 1, prog_end = 0 
+call get_current_symbol
+symbol = char:[b] - 98 ascii
+word = b , symbol = b
+return from get_current_symbol
+call get_current_command_index
+j = 0, alphabet[j] = a, symbol = b
+j = 1, alphabet[j] = b, symbol = b
+command_index = int:[1]
+return from get_current_command_index
+current_command_index = int:[1]
+TEST 1 1
+current_prog = char *[bR2]
+call write_new_symbol
+(**word)[0 (current_word_index)] = char:[b]
+return from write_new_symbol
+call move_head
+move_instruction = char:[R]
+*current_word_index = int:[1]
+return from move_head
+call change_status
+TEST status_value = int[2], current_prog[2] = char[2], ascii current_prog[2] =[50]
+command_status = int:[1]
+*status = int:[1]
+return from change_status
+call print_word
+char *word_start_ptr = char *[bab]
+Word: bab
+return from print_word
+symbol = b , current_prog = bR2 , current_word_index = 1 , status = 1, prog_end = 0 
+call get_current_symbol
+symbol = char:[a] - 97 ascii
+word = a , symbol = a
+return from get_current_symbol
+call get_current_command_index
+j = 0, alphabet[j] = a, symbol = a
+command_index = int:[0]
+return from get_current_command_index
+current_command_index = int:[0]
+TEST 1 0
+current_prog = char *[aR2]
+call write_new_symbol
+(**word)[1 (current_word_index)] = char:[a]
+return from write_new_symbol
+call move_head
+move_instruction = char:[R]
+*current_word_index = int:[2]
+return from move_head
+call change_status
+TEST status_value = int[2], current_prog[2] = char[2], ascii current_prog[2] =[50]
+command_status = int:[1]
+*status = int:[1]
+return from change_status
+call print_word
+char *word_start_ptr = char *[bab]
+Word: bab
+return from print_word
+symbol = a , current_prog = aR2 , current_word_index = 2 , status = 1, prog_end = 0 
+call get_current_symbol
+symbol = char:[b] - 98 ascii
+word = b , symbol = b
+return from get_current_symbol
+call get_current_command_index
+j = 0, alphabet[j] = a, symbol = b
+j = 1, alphabet[j] = b, symbol = b
+command_index = int:[1]
+return from get_current_command_index
+current_command_index = int:[1]
+TEST 1 1
+current_prog = char *[bR2]
+call write_new_symbol
+(**word)[2 (current_word_index)] = char:[b]
+return from write_new_symbol
+call move_head
+move_instruction = char:[R]
+*current_word_index = int:[3]
+return from move_head
+call change_status
+TEST status_value = int[2], current_prog[2] = char[2], ascii current_prog[2] =[50]
+command_status = int:[1]
+*status = int:[1]
+return from change_status
+call print_word
+char *word_start_ptr = char *[bab]
+Word: bab
+return from print_word
+symbol = b , current_prog = bR2 , current_word_index = 3 , status = 1, prog_end = 0 
+call get_current_symbol
+symbol = char:[^] - 94 ascii
+word =   , symbol = ^
+return from get_current_symbol
+call get_current_command_index
+j = 0, alphabet[j] = a, symbol = ^
+j = 1, alphabet[j] = b, symbol = ^
+j = 2, alphabet[j] = ^, symbol = ^
+command_index = int:[2]
+return from get_current_command_index
+current_command_index = int:[2]
+TEST 1 2
+current_prog = char *[=L3]
+call write_new_symbol
+(**word)[3 (current_word_index)] = char:[=]
+return from write_new_symbol
+call move_head
+move_instruction = char:[L]
+*current_word_index = int:[2]
+return from move_head
+call change_status
+TEST status_value = int[3], current_prog[2] = char[3], ascii current_prog[2] =[51]
+command_status = int:[2]
+*status = int:[2]
+return from change_status
+call print_word
+char *word_start_ptr = char *[bab=]
+Word: bab=
+return from print_word
+symbol = ^ , current_prog = =L3 , current_word_index = 2 , status = 2, prog_end = 0 
+call get_current_symbol
+symbol = char:[b] - 98 ascii
+word = b , symbol = b
+return from get_current_symbol
+call get_current_command_index
+j = 0, alphabet[j] = a, symbol = b
+j = 1, alphabet[j] = b, symbol = b
+command_index = int:[1]
+return from get_current_command_index
+current_command_index = int:[1]
+TEST 2 1
+current_prog = char *[bL3]
+call write_new_symbol
+(**word)[2 (current_word_index)] = char:[b]
+return from write_new_symbol
+call move_head
+move_instruction = char:[L]
+*current_word_index = int:[1]
+return from move_head
+call change_status
+TEST status_value = int[3], current_prog[2] = char[3], ascii current_prog[2] =[51]
+command_status = int:[2]
+*status = int:[2]
+return from change_status
+call print_word
+char *word_start_ptr = char *[bab=]
+Word: bab=
+return from print_word
+symbol = b , current_prog = bL3 , current_word_index = 1 , status = 2, prog_end = 0 
+call get_current_symbol
+symbol = char:[a] - 97 ascii
+word = a , symbol = a
+return from get_current_symbol
+call get_current_command_index
+j = 0, alphabet[j] = a, symbol = a
+command_index = int:[0]
+return from get_current_command_index
+current_command_index = int:[0]
+TEST 2 0
+current_prog = char *[aL3]
+call write_new_symbol
+(**word)[1 (current_word_index)] = char:[a]
+return from write_new_symbol
+call move_head
+move_instruction = char:[L]
+*current_word_index = int:[0]
+return from move_head
+call change_status
+TEST status_value = int[3], current_prog[2] = char[3], ascii current_prog[2] =[51]
+command_status = int:[2]
+*status = int:[2]
+return from change_status
+call print_word
+char *word_start_ptr = char *[bab=]
+Word: bab=
+return from print_word
+symbol = a , current_prog = aL3 , current_word_index = 0 , status = 2, prog_end = 0 
+call get_current_symbol
+symbol = char:[b] - 98 ascii
+word = b , symbol = b
+return from get_current_symbol
+call get_current_command_index
+j = 0, alphabet[j] = a, symbol = b
+j = 1, alphabet[j] = b, symbol = b
+command_index = int:[1]
+return from get_current_command_index
+current_command_index = int:[1]
+TEST 2 1
+current_prog = char *[bL3]
+call write_new_symbol
+(**word)[0 (current_word_index)] = char:[b]
+return from write_new_symbol
+call move_head
+move_instruction = char:[L]
+*current_word_index = int:[-1]
+return from move_head
+call change_status
+TEST status_value = int[3], current_prog[2] = char[3], ascii current_prog[2] =[51]
+command_status = int:[2]
+*status = int:[2]
+return from change_status
+call print_word
+char *word_start_ptr = char *[bab=]
+Word: bab=
+return from print_word
+symbol = b , current_prog = bL3 , current_word_index = -1 , status = 2, prog_end = 0 
+call get_current_symbol
+symbol = char:[^] - 94 ascii
+word =   , symbol = ^
+return from get_current_symbol
+call get_current_command_index
+j = 0, alphabet[j] = a, symbol = ^
+j = 1, alphabet[j] = b, symbol = ^
+j = 2, alphabet[j] = ^, symbol = ^
+command_index = int:[2]
+return from get_current_command_index
+current_command_index = int:[2]
+TEST 2 2
+current_prog = char *[^R4]
+first_word_index = int:[-1]
+call write_new_symbol
+(**word)[-1 (current_word_index)] = char:[^]
+return from write_new_symbol
+call move_head
+move_instruction = char:[R]
+*current_word_index = int:[0]
+return from move_head
+call change_status
+TEST status_value = int[4], current_prog[2] = char[4], ascii current_prog[2] =[52]
+command_status = int:[3]
+*status = int:[3]
+return from change_status
+call print_word
+char *word_start_ptr = char *[bab=]
+word_start_index = int:[19]
+char *word_start_ptr = char *[^bab=]
+char *word_start_ptr = char *[bab=]
+Word: bab=
+return from print_word
+symbol = ^ , current_prog = ^R4 , current_word_index = 0 , status = 3, prog_end = 0 
+call get_current_symbol
+symbol = char:[b] - 98 ascii
+word = b , symbol = b
+return from get_current_symbol
+call get_current_command_index
+j = 0, alphabet[j] = a, symbol = b
+j = 1, alphabet[j] = b, symbol = b
+command_index = int:[1]
+return from get_current_command_index
+current_command_index = int:[1]
+TEST 3 1
+current_prog = char *[^R6]
+call write_new_symbol
+(**word)[0 (current_word_index)] = char:[^]
+return from write_new_symbol
+call move_head
+move_instruction = char:[R]
+*current_word_index = int:[1]
+return from move_head
+call change_status
+TEST status_value = int[6], current_prog[2] = char[6], ascii current_prog[2] =[54]
+command_status = int:[5]
+*status = int:[5]
+return from change_status
+call print_word
+char *word_start_ptr = char *[^ab=]
+word_start_index = int:[19]
+char *word_start_ptr = char *[^^ab=]
+char *word_start_ptr = char *[^ab=]
+char *word_start_ptr = char *[ab=]
+Word: ab=
+return from print_word
+symbol = b , current_prog = ^R6 , current_word_index = 1 , status = 5, prog_end = 0 
+call get_current_symbol
+symbol = char:[a] - 97 ascii
+word = a , symbol = a
+return from get_current_symbol
+call get_current_command_index
+j = 0, alphabet[j] = a, symbol = a
+command_index = int:[0]
+return from get_current_command_index
+current_command_index = int:[0]
+TEST 5 0
+current_prog = char *[aR6]
+call write_new_symbol
+(**word)[1 (current_word_index)] = char:[a]
+return from write_new_symbol
+call move_head
+move_instruction = char:[R]
+*current_word_index = int:[2]
+return from move_head
+call change_status
+TEST status_value = int[6], current_prog[2] = char[6], ascii current_prog[2] =[54]
+command_status = int:[5]
+*status = int:[5]
+return from change_status
+call print_word
+char *word_start_ptr = char *[^ab=]
+word_start_index = int:[19]
+char *word_start_ptr = char *[^^ab=]
+char *word_start_ptr = char *[^ab=]
+char *word_start_ptr = char *[ab=]
+Word: ab=
+return from print_word
+symbol = a , current_prog = aR6 , current_word_index = 2 , status = 5, prog_end = 0 
+call get_current_symbol
+symbol = char:[b] - 98 ascii
+word = b , symbol = b
+return from get_current_symbol
+call get_current_command_index
+j = 0, alphabet[j] = a, symbol = b
+j = 1, alphabet[j] = b, symbol = b
+command_index = int:[1]
+return from get_current_command_index
+current_command_index = int:[1]
+TEST 5 1
+current_prog = char *[bR6]
+call write_new_symbol
+(**word)[2 (current_word_index)] = char:[b]
+return from write_new_symbol
+call move_head
+move_instruction = char:[R]
+*current_word_index = int:[3]
+return from move_head
+call change_status
+TEST status_value = int[6], current_prog[2] = char[6], ascii current_prog[2] =[54]
+command_status = int:[5]
+*status = int:[5]
+return from change_status
+call print_word
+char *word_start_ptr = char *[^ab=]
+word_start_index = int:[19]
+char *word_start_ptr = char *[^^ab=]
+char *word_start_ptr = char *[^ab=]
+char *word_start_ptr = char *[ab=]
+Word: ab=
+return from print_word
+symbol = b , current_prog = bR6 , current_word_index = 3 , status = 5, prog_end = 0 
+call get_current_symbol
+symbol = char:[=] - 61 ascii
+word = = , symbol = =
+return from get_current_symbol
+call get_current_command_index
+j = 0, alphabet[j] = a, symbol = =
+j = 1, alphabet[j] = b, symbol = =
+j = 2, alphabet[j] = ^, symbol = =
+j = 3, alphabet[j] = =, symbol = =
+command_index = int:[3]
+return from get_current_command_index
+current_command_index = int:[3]
+TEST 5 3
+current_prog = char *[=R6]
+call write_new_symbol
+(**word)[3 (current_word_index)] = char:[=]
+return from write_new_symbol
+call move_head
+move_instruction = char:[R]
+*current_word_index = int:[4]
+return from move_head
+call change_status
+TEST status_value = int[6], current_prog[2] = char[6], ascii current_prog[2] =[54]
+command_status = int:[5]
+*status = int:[5]
+return from change_status
+call print_word
+char *word_start_ptr = char *[^ab=]
+word_start_index = int:[19]
+char *word_start_ptr = char *[^^ab=]
+char *word_start_ptr = char *[^ab=]
+char *word_start_ptr = char *[ab=]
+Word: ab=
+return from print_word
+symbol = = , current_prog = =R6 , current_word_index = 4 , status = 5, prog_end = 0 
+call get_current_symbol
+symbol = char:[^] - 94 ascii
+word =   , symbol = ^
+return from get_current_symbol
+call get_current_command_index
+j = 0, alphabet[j] = a, symbol = ^
+j = 1, alphabet[j] = b, symbol = ^
+j = 2, alphabet[j] = ^, symbol = ^
+command_index = int:[2]
+return from get_current_command_index
+current_command_index = int:[2]
+TEST 5 2
+current_prog = char *[bR8]
+call write_new_symbol
+(**word)[4 (current_word_index)] = char:[b]
+return from write_new_symbol
+call move_head
+move_instruction = char:[R]
+*current_word_index = int:[5]
+return from move_head
+call change_status
+TEST status_value = int[8], current_prog[2] = char[8], ascii current_prog[2] =[56]
+command_status = int:[7]
+*status = int:[7]
+return from change_status
+call print_word
+char *word_start_ptr = char *[^ab=b]
+word_start_index = int:[19]
+char *word_start_ptr = char *[^^ab=b]
+char *word_start_ptr = char *[^ab=b]
+char *word_start_ptr = char *[ab=b]
+Word: ab=b
+return from print_word
+symbol = ^ , current_prog = bR8 , current_word_index = 5 , status = 7, prog_end = 0 
+call get_current_symbol
+symbol = char:[^] - 94 ascii
+word =   , symbol = ^
+return from get_current_symbol
+call get_current_command_index
+j = 0, alphabet[j] = a, symbol = ^
+j = 1, alphabet[j] = b, symbol = ^
+j = 2, alphabet[j] = ^, symbol = ^
+command_index = int:[2]
+return from get_current_command_index
+current_command_index = int:[2]
+TEST 7 2
+current_prog = char *[bL8]
+call write_new_symbol
+(**word)[5 (current_word_index)] = char:[b]
+return from write_new_symbol
+call move_head
+move_instruction = char:[L]
+*current_word_index = int:[4]
+return from move_head
+call change_status
+TEST status_value = int[8], current_prog[2] = char[8], ascii current_prog[2] =[56]
+command_status = int:[7]
+*status = int:[7]
+return from change_status
+call print_word
+char *word_start_ptr = char *[^ab=bb]
+word_start_index = int:[19]
+char *word_start_ptr = char *[^^ab=bb]
+char *word_start_ptr = char *[^ab=bb]
+char *word_start_ptr = char *[ab=bb]
+Word: ab=bb
+return from print_word
+symbol = ^ , current_prog = bL8 , current_word_index = 4 , status = 7, prog_end = 0 
+call get_current_symbol
+symbol = char:[b] - 98 ascii
+word = b , symbol = b
+return from get_current_symbol
+call get_current_command_index
+j = 0, alphabet[j] = a, symbol = b
+j = 1, alphabet[j] = b, symbol = b
+command_index = int:[1]
+return from get_current_command_index
+current_command_index = int:[1]
+TEST 7 1
+current_prog = char *[bL3]
+call write_new_symbol
+(**word)[4 (current_word_index)] = char:[b]
+return from write_new_symbol
+call move_head
+move_instruction = char:[L]
+*current_word_index = int:[3]
+return from move_head
+call change_status
+TEST status_value = int[3], current_prog[2] = char[3], ascii current_prog[2] =[51]
+command_status = int:[2]
+*status = int:[2]
+return from change_status
+call print_word
+char *word_start_ptr = char *[^ab=bb]
+word_start_index = int:[19]
+char *word_start_ptr = char *[^^ab=bb]
+char *word_start_ptr = char *[^ab=bb]
+char *word_start_ptr = char *[ab=bb]
+Word: ab=bb
+return from print_word
+symbol = b , current_prog = bL3 , current_word_index = 3 , status = 2, prog_end = 0 
+call get_current_symbol
+symbol = char:[=] - 61 ascii
+word = = , symbol = =
+return from get_current_symbol
+call get_current_command_index
+j = 0, alphabet[j] = a, symbol = =
+j = 1, alphabet[j] = b, symbol = =
+j = 2, alphabet[j] = ^, symbol = =
+j = 3, alphabet[j] = =, symbol = =
+command_index = int:[3]
+return from get_current_command_index
+current_command_index = int:[3]
+TEST 2 3
+current_prog = char *[=L3]
+call write_new_symbol
+(**word)[3 (current_word_index)] = char:[=]
+return from write_new_symbol
+call move_head
+move_instruction = char:[L]
+*current_word_index = int:[2]
+return from move_head
+call change_status
+TEST status_value = int[3], current_prog[2] = char[3], ascii current_prog[2] =[51]
+command_status = int:[2]
+*status = int:[2]
+return from change_status
+call print_word
+char *word_start_ptr = char *[^ab=bb]
+word_start_index = int:[19]
+char *word_start_ptr = char *[^^ab=bb]
+char *word_start_ptr = char *[^ab=bb]
+char *word_start_ptr = char *[ab=bb]
+Word: ab=bb
+return from print_word
+symbol = = , current_prog = =L3 , current_word_index = 2 , status = 2, prog_end = 0 
+call get_current_symbol
+symbol = char:[b] - 98 ascii
+word = b , symbol = b
+return from get_current_symbol
+call get_current_command_index
+j = 0, alphabet[j] = a, symbol = b
+j = 1, alphabet[j] = b, symbol = b
+command_index = int:[1]
+return from get_current_command_index
+current_command_index = int:[1]
+TEST 2 1
+current_prog = char *[bL3]
+call write_new_symbol
+(**word)[2 (current_word_index)] = char:[b]
+return from write_new_symbol
+call move_head
+move_instruction = char:[L]
+*current_word_index = int:[1]
+return from move_head
+call change_status
+TEST status_value = int[3], current_prog[2] = char[3], ascii current_prog[2] =[51]
+command_status = int:[2]
+*status = int:[2]
+return from change_status
+call print_word
+char *word_start_ptr = char *[^ab=bb]
+word_start_index = int:[19]
+char *word_start_ptr = char *[^^ab=bb]
+char *word_start_ptr = char *[^ab=bb]
+char *word_start_ptr = char *[ab=bb]
+Word: ab=bb
+return from print_word
+symbol = b , current_prog = bL3 , current_word_index = 1 , status = 2, prog_end = 0 
+call get_current_symbol
+symbol = char:[a] - 97 ascii
+word = a , symbol = a
+return from get_current_symbol
+call get_current_command_index
+j = 0, alphabet[j] = a, symbol = a
+command_index = int:[0]
+return from get_current_command_index
+current_command_index = int:[0]
+TEST 2 0
+current_prog = char *[aL3]
+call write_new_symbol
+(**word)[1 (current_word_index)] = char:[a]
+return from write_new_symbol
+call move_head
+move_instruction = char:[L]
+*current_word_index = int:[0]
+return from move_head
+call change_status
+TEST status_value = int[3], current_prog[2] = char[3], ascii current_prog[2] =[51]
+command_status = int:[2]
+*status = int:[2]
+return from change_status
+call print_word
+char *word_start_ptr = char *[^ab=bb]
+word_start_index = int:[19]
+char *word_start_ptr = char *[^^ab=bb]
+char *word_start_ptr = char *[^ab=bb]
+char *word_start_ptr = char *[ab=bb]
+Word: ab=bb
+return from print_word
+symbol = a , current_prog = aL3 , current_word_index = 0 , status = 2, prog_end = 0 
+call get_current_symbol
+symbol = char:[^] - 94 ascii
+word = ^ , symbol = ^
+return from get_current_symbol
+call get_current_command_index
+j = 0, alphabet[j] = a, symbol = ^
+j = 1, alphabet[j] = b, symbol = ^
+j = 2, alphabet[j] = ^, symbol = ^
+command_index = int:[2]
+return from get_current_command_index
+current_command_index = int:[2]
+TEST 2 2
+current_prog = char *[^R4]
+call write_new_symbol
+(**word)[0 (current_word_index)] = char:[^]
+return from write_new_symbol
+call move_head
+move_instruction = char:[R]
+*current_word_index = int:[1]
+return from move_head
+call change_status
+TEST status_value = int[4], current_prog[2] = char[4], ascii current_prog[2] =[52]
+command_status = int:[3]
+*status = int:[3]
+return from change_status
+call print_word
+char *word_start_ptr = char *[^ab=bb]
+word_start_index = int:[19]
+char *word_start_ptr = char *[^^ab=bb]
+char *word_start_ptr = char *[^ab=bb]
+char *word_start_ptr = char *[ab=bb]
+Word: ab=bb
+return from print_word
+symbol = ^ , current_prog = ^R4 , current_word_index = 1 , status = 3, prog_end = 0 
+call get_current_symbol
+symbol = char:[a] - 97 ascii
+word = a , symbol = a
+return from get_current_symbol
+call get_current_command_index
+j = 0, alphabet[j] = a, symbol = a
+command_index = int:[0]
+return from get_current_command_index
+current_command_index = int:[0]
+TEST 3 0
+current_prog = char *[^R5]
+call write_new_symbol
+(**word)[1 (current_word_index)] = char:[^]
+return from write_new_symbol
+call move_head
+move_instruction = char:[R]
+*current_word_index = int:[2]
+return from move_head
+call change_status
+TEST status_value = int[5], current_prog[2] = char[5], ascii current_prog[2] =[53]
+command_status = int:[4]
+*status = int:[4]
+return from change_status
+call print_word
+char *word_start_ptr = char *[^^b=bb]
+word_start_index = int:[19]
+char *word_start_ptr = char *[^^^b=bb]
+char *word_start_ptr = char *[^^b=bb]
+char *word_start_ptr = char *[^b=bb]
+char *word_start_ptr = char *[b=bb]
+Word: b=bb
+return from print_word
+symbol = a , current_prog = ^R5 , current_word_index = 2 , status = 4, prog_end = 0 
+call get_current_symbol
+symbol = char:[b] - 98 ascii
+word = b , symbol = b
+return from get_current_symbol
+call get_current_command_index
+j = 0, alphabet[j] = a, symbol = b
+j = 1, alphabet[j] = b, symbol = b
+command_index = int:[1]
+return from get_current_command_index
+current_command_index = int:[1]
+TEST 4 1
+current_prog = char *[bR5]
+call write_new_symbol
+(**word)[2 (current_word_index)] = char:[b]
+return from write_new_symbol
+call move_head
+move_instruction = char:[R]
+*current_word_index = int:[3]
+return from move_head
+call change_status
+TEST status_value = int[5], current_prog[2] = char[5], ascii current_prog[2] =[53]
+command_status = int:[4]
+*status = int:[4]
+return from change_status
+call print_word
+char *word_start_ptr = char *[^^b=bb]
+word_start_index = int:[19]
+char *word_start_ptr = char *[^^^b=bb]
+char *word_start_ptr = char *[^^b=bb]
+char *word_start_ptr = char *[^b=bb]
+char *word_start_ptr = char *[b=bb]
+Word: b=bb
+return from print_word
+symbol = b , current_prog = bR5 , current_word_index = 3 , status = 4, prog_end = 0 
+call get_current_symbol
+symbol = char:[=] - 61 ascii
+word = = , symbol = =
+return from get_current_symbol
+call get_current_command_index
+j = 0, alphabet[j] = a, symbol = =
+j = 1, alphabet[j] = b, symbol = =
+j = 2, alphabet[j] = ^, symbol = =
+j = 3, alphabet[j] = =, symbol = =
+command_index = int:[3]
+return from get_current_command_index
+current_command_index = int:[3]
+TEST 4 3
+current_prog = char *[=R5]
+call write_new_symbol
+(**word)[3 (current_word_index)] = char:[=]
+return from write_new_symbol
+call move_head
+move_instruction = char:[R]
+*current_word_index = int:[4]
+return from move_head
+call change_status
+TEST status_value = int[5], current_prog[2] = char[5], ascii current_prog[2] =[53]
+command_status = int:[4]
+*status = int:[4]
+return from change_status
+call print_word
+char *word_start_ptr = char *[^^b=bb]
+word_start_index = int:[19]
+char *word_start_ptr = char *[^^^b=bb]
+char *word_start_ptr = char *[^^b=bb]
+char *word_start_ptr = char *[^b=bb]
+char *word_start_ptr = char *[b=bb]
+Word: b=bb
+return from print_word
+symbol = = , current_prog = =R5 , current_word_index = 4 , status = 4, prog_end = 0 
+call get_current_symbol
+symbol = char:[b] - 98 ascii
+word = b , symbol = b
+return from get_current_symbol
+call get_current_command_index
+j = 0, alphabet[j] = a, symbol = b
+j = 1, alphabet[j] = b, symbol = b
+command_index = int:[1]
+return from get_current_command_index
+current_command_index = int:[1]
+TEST 4 1
+current_prog = char *[bR5]
+call write_new_symbol
+(**word)[4 (current_word_index)] = char:[b]
+return from write_new_symbol
+call move_head
+move_instruction = char:[R]
+*current_word_index = int:[5]
+return from move_head
+call change_status
+TEST status_value = int[5], current_prog[2] = char[5], ascii current_prog[2] =[53]
+command_status = int:[4]
+*status = int:[4]
+return from change_status
+call print_word
+char *word_start_ptr = char *[^^b=bb]
+word_start_index = int:[19]
+char *word_start_ptr = char *[^^^b=bb]
+char *word_start_ptr = char *[^^b=bb]
+char *word_start_ptr = char *[^b=bb]
+char *word_start_ptr = char *[b=bb]
+Word: b=bb
+return from print_word
+symbol = b , current_prog = bR5 , current_word_index = 5 , status = 4, prog_end = 0 
+call get_current_symbol
+symbol = char:[b] - 98 ascii
+word = b , symbol = b
+return from get_current_symbol
+call get_current_command_index
+j = 0, alphabet[j] = a, symbol = b
+j = 1, alphabet[j] = b, symbol = b
+command_index = int:[1]
+return from get_current_command_index
+current_command_index = int:[1]
+TEST 4 1
+current_prog = char *[bR5]
+call write_new_symbol
+(**word)[5 (current_word_index)] = char:[b]
+return from write_new_symbol
+call move_head
+move_instruction = char:[R]
+*current_word_index = int:[6]
+return from move_head
+call change_status
+TEST status_value = int[5], current_prog[2] = char[5], ascii current_prog[2] =[53]
+command_status = int:[4]
+*status = int:[4]
+return from change_status
+call print_word
+char *word_start_ptr = char *[^^b=bb]
+word_start_index = int:[19]
+char *word_start_ptr = char *[^^^b=bb]
+char *word_start_ptr = char *[^^b=bb]
+char *word_start_ptr = char *[^b=bb]
+char *word_start_ptr = char *[b=bb]
+Word: b=bb
+return from print_word
+symbol = b , current_prog = bR5 , current_word_index = 6 , status = 4, prog_end = 0 
+call get_current_symbol
+symbol = char:[^] - 94 ascii
+word =   , symbol = ^
+return from get_current_symbol
+call get_current_command_index
+j = 0, alphabet[j] = a, symbol = ^
+j = 1, alphabet[j] = b, symbol = ^
+j = 2, alphabet[j] = ^, symbol = ^
+command_index = int:[2]
+return from get_current_command_index
+current_command_index = int:[2]
+TEST 4 2
+current_prog = char *[aR7]
+call write_new_symbol
+(**word)[6 (current_word_index)] = char:[a]
+return from write_new_symbol
+call move_head
+move_instruction = char:[R]
+*current_word_index = int:[7]
+return from move_head
+call change_status
+TEST status_value = int[7], current_prog[2] = char[7], ascii current_prog[2] =[55]
+command_status = int:[6]
+*status = int:[6]
+return from change_status
+call print_word
+char *word_start_ptr = char *[^^b=bba]
+word_start_index = int:[19]
+char *word_start_ptr = char *[^^^b=bba]
+char *word_start_ptr = char *[^^b=bba]
+char *word_start_ptr = char *[^b=bba]
+char *word_start_ptr = char *[b=bba]
+Word: b=bba
+return from print_word
+symbol = ^ , current_prog = aR7 , current_word_index = 7 , status = 6, prog_end = 0 
+call get_current_symbol
+symbol = char:[^] - 94 ascii
+word =   , symbol = ^
+return from get_current_symbol
+call get_current_command_index
+j = 0, alphabet[j] = a, symbol = ^
+j = 1, alphabet[j] = b, symbol = ^
+j = 2, alphabet[j] = ^, symbol = ^
+command_index = int:[2]
+return from get_current_command_index
+current_command_index = int:[2]
+TEST 6 2
+current_prog = char *[aL7]
+call write_new_symbol
+(**word)[7 (current_word_index)] = char:[a]
+return from write_new_symbol
+call move_head
+move_instruction = char:[L]
+*current_word_index = int:[6]
+return from move_head
+call change_status
+TEST status_value = int[7], current_prog[2] = char[7], ascii current_prog[2] =[55]
+command_status = int:[6]
+*status = int:[6]
+return from change_status
+call print_word
+char *word_start_ptr = char *[^^b=bbaa]
+word_start_index = int:[19]
+char *word_start_ptr = char *[^^^b=bbaa]
+char *word_start_ptr = char *[^^b=bbaa]
+char *word_start_ptr = char *[^b=bbaa]
+char *word_start_ptr = char *[b=bbaa]
+Word: b=bbaa
+return from print_word
+symbol = ^ , current_prog = aL7 , current_word_index = 6 , status = 6, prog_end = 0 
+call get_current_symbol
+symbol = char:[a] - 97 ascii
+word = a , symbol = a
+return from get_current_symbol
+call get_current_command_index
+j = 0, alphabet[j] = a, symbol = a
+command_index = int:[0]
+return from get_current_command_index
+current_command_index = int:[0]
+TEST 6 0
+current_prog = char *[aL3]
+call write_new_symbol
+(**word)[6 (current_word_index)] = char:[a]
+return from write_new_symbol
+call move_head
+move_instruction = char:[L]
+*current_word_index = int:[5]
+return from move_head
+call change_status
+TEST status_value = int[3], current_prog[2] = char[3], ascii current_prog[2] =[51]
+command_status = int:[2]
+*status = int:[2]
+return from change_status
+call print_word
+char *word_start_ptr = char *[^^b=bbaa]
+word_start_index = int:[19]
+char *word_start_ptr = char *[^^^b=bbaa]
+char *word_start_ptr = char *[^^b=bbaa]
+char *word_start_ptr = char *[^b=bbaa]
+char *word_start_ptr = char *[b=bbaa]
+Word: b=bbaa
+return from print_word
+symbol = a , current_prog = aL3 , current_word_index = 5 , status = 2, prog_end = 0 
+call get_current_symbol
+symbol = char:[b] - 98 ascii
+word = b , symbol = b
+return from get_current_symbol
+call get_current_command_index
+j = 0, alphabet[j] = a, symbol = b
+j = 1, alphabet[j] = b, symbol = b
+command_index = int:[1]
+return from get_current_command_index
+current_command_index = int:[1]
+TEST 2 1
+current_prog = char *[bL3]
+call write_new_symbol
+(**word)[5 (current_word_index)] = char:[b]
+return from write_new_symbol
+call move_head
+move_instruction = char:[L]
+*current_word_index = int:[4]
+return from move_head
+call change_status
+TEST status_value = int[3], current_prog[2] = char[3], ascii current_prog[2] =[51]
+command_status = int:[2]
+*status = int:[2]
+return from change_status
+call print_word
+char *word_start_ptr = char *[^^b=bbaa]
+word_start_index = int:[19]
+char *word_start_ptr = char *[^^^b=bbaa]
+char *word_start_ptr = char *[^^b=bbaa]
+char *word_start_ptr = char *[^b=bbaa]
+char *word_start_ptr = char *[b=bbaa]
+Word: b=bbaa
+return from print_word
+symbol = b , current_prog = bL3 , current_word_index = 4 , status = 2, prog_end = 0 
+call get_current_symbol
+symbol = char:[b] - 98 ascii
+word = b , symbol = b
+return from get_current_symbol
+call get_current_command_index
+j = 0, alphabet[j] = a, symbol = b
+j = 1, alphabet[j] = b, symbol = b
+command_index = int:[1]
+return from get_current_command_index
+current_command_index = int:[1]
+TEST 2 1
+current_prog = char *[bL3]
+call write_new_symbol
+(**word)[4 (current_word_index)] = char:[b]
+return from write_new_symbol
+call move_head
+move_instruction = char:[L]
+*current_word_index = int:[3]
+return from move_head
+call change_status
+TEST status_value = int[3], current_prog[2] = char[3], ascii current_prog[2] =[51]
+command_status = int:[2]
+*status = int:[2]
+return from change_status
+call print_word
+char *word_start_ptr = char *[^^b=bbaa]
+word_start_index = int:[19]
+char *word_start_ptr = char *[^^^b=bbaa]
+char *word_start_ptr = char *[^^b=bbaa]
+char *word_start_ptr = char *[^b=bbaa]
+char *word_start_ptr = char *[b=bbaa]
+Word: b=bbaa
+return from print_word
+symbol = b , current_prog = bL3 , current_word_index = 3 , status = 2, prog_end = 0 
+call get_current_symbol
+symbol = char:[=] - 61 ascii
+word = = , symbol = =
+return from get_current_symbol
+call get_current_command_index
+j = 0, alphabet[j] = a, symbol = =
+j = 1, alphabet[j] = b, symbol = =
+j = 2, alphabet[j] = ^, symbol = =
+j = 3, alphabet[j] = =, symbol = =
+command_index = int:[3]
+return from get_current_command_index
+current_command_index = int:[3]
+TEST 2 3
+current_prog = char *[=L3]
+call write_new_symbol
+(**word)[3 (current_word_index)] = char:[=]
+return from write_new_symbol
+call move_head
+move_instruction = char:[L]
+*current_word_index = int:[2]
+return from move_head
+call change_status
+TEST status_value = int[3], current_prog[2] = char[3], ascii current_prog[2] =[51]
+command_status = int:[2]
+*status = int:[2]
+return from change_status
+call print_word
+char *word_start_ptr = char *[^^b=bbaa]
+word_start_index = int:[19]
+char *word_start_ptr = char *[^^^b=bbaa]
+char *word_start_ptr = char *[^^b=bbaa]
+char *word_start_ptr = char *[^b=bbaa]
+char *word_start_ptr = char *[b=bbaa]
+Word: b=bbaa
+return from print_word
+symbol = = , current_prog = =L3 , current_word_index = 2 , status = 2, prog_end = 0 
+call get_current_symbol
+symbol = char:[b] - 98 ascii
+word = b , symbol = b
+return from get_current_symbol
+call get_current_command_index
+j = 0, alphabet[j] = a, symbol = b
+j = 1, alphabet[j] = b, symbol = b
+command_index = int:[1]
+return from get_current_command_index
+current_command_index = int:[1]
+TEST 2 1
+current_prog = char *[bL3]
+call write_new_symbol
+(**word)[2 (current_word_index)] = char:[b]
+return from write_new_symbol
+call move_head
+move_instruction = char:[L]
+*current_word_index = int:[1]
+return from move_head
+call change_status
+TEST status_value = int[3], current_prog[2] = char[3], ascii current_prog[2] =[51]
+command_status = int:[2]
+*status = int:[2]
+return from change_status
+call print_word
+char *word_start_ptr = char *[^^b=bbaa]
+word_start_index = int:[19]
+char *word_start_ptr = char *[^^^b=bbaa]
+char *word_start_ptr = char *[^^b=bbaa]
+char *word_start_ptr = char *[^b=bbaa]
+char *word_start_ptr = char *[b=bbaa]
+Word: b=bbaa
+return from print_word
+symbol = b , current_prog = bL3 , current_word_index = 1 , status = 2, prog_end = 0 
+call get_current_symbol
+symbol = char:[^] - 94 ascii
+word = ^ , symbol = ^
+return from get_current_symbol
+call get_current_command_index
+j = 0, alphabet[j] = a, symbol = ^
+j = 1, alphabet[j] = b, symbol = ^
+j = 2, alphabet[j] = ^, symbol = ^
+command_index = int:[2]
+return from get_current_command_index
+current_command_index = int:[2]
+TEST 2 2
+current_prog = char *[^R4]
+call write_new_symbol
+(**word)[1 (current_word_index)] = char:[^]
+return from write_new_symbol
+call move_head
+move_instruction = char:[R]
+*current_word_index = int:[2]
+return from move_head
+call change_status
+TEST status_value = int[4], current_prog[2] = char[4], ascii current_prog[2] =[52]
+command_status = int:[3]
+*status = int:[3]
+return from change_status
+call print_word
+char *word_start_ptr = char *[^^b=bbaa]
+word_start_index = int:[19]
+char *word_start_ptr = char *[^^^b=bbaa]
+char *word_start_ptr = char *[^^b=bbaa]
+char *word_start_ptr = char *[^b=bbaa]
+char *word_start_ptr = char *[b=bbaa]
+Word: b=bbaa
+return from print_word
+symbol = ^ , current_prog = ^R4 , current_word_index = 2 , status = 3, prog_end = 0 
+call get_current_symbol
+symbol = char:[b] - 98 ascii
+word = b , symbol = b
+return from get_current_symbol
+call get_current_command_index
+j = 0, alphabet[j] = a, symbol = b
+j = 1, alphabet[j] = b, symbol = b
+command_index = int:[1]
+return from get_current_command_index
+current_command_index = int:[1]
+TEST 3 1
+current_prog = char *[^R6]
+call write_new_symbol
+(**word)[2 (current_word_index)] = char:[^]
+return from write_new_symbol
+call move_head
+move_instruction = char:[R]
+*current_word_index = int:[3]
+return from move_head
+call change_status
+TEST status_value = int[6], current_prog[2] = char[6], ascii current_prog[2] =[54]
+command_status = int:[5]
+*status = int:[5]
+return from change_status
+call print_word
+char *word_start_ptr = char *[^^^=bbaa]
+word_start_index = int:[19]
+char *word_start_ptr = char *[^^^^=bbaa]
+char *word_start_ptr = char *[^^^=bbaa]
+char *word_start_ptr = char *[^^=bbaa]
+char *word_start_ptr = char *[^=bbaa]
+char *word_start_ptr = char *[=bbaa]
+Word: =bbaa
+return from print_word
+symbol = b , current_prog = ^R6 , current_word_index = 3 , status = 5, prog_end = 0 
+call get_current_symbol
+symbol = char:[=] - 61 ascii
+word = = , symbol = =
+return from get_current_symbol
+call get_current_command_index
+j = 0, alphabet[j] = a, symbol = =
+j = 1, alphabet[j] = b, symbol = =
+j = 2, alphabet[j] = ^, symbol = =
+j = 3, alphabet[j] = =, symbol = =
+command_index = int:[3]
+return from get_current_command_index
+current_command_index = int:[3]
+TEST 5 3
+current_prog = char *[=R6]
+call write_new_symbol
+(**word)[3 (current_word_index)] = char:[=]
+return from write_new_symbol
+call move_head
+move_instruction = char:[R]
+*current_word_index = int:[4]
+return from move_head
+call change_status
+TEST status_value = int[6], current_prog[2] = char[6], ascii current_prog[2] =[54]
+command_status = int:[5]
+*status = int:[5]
+return from change_status
+call print_word
+char *word_start_ptr = char *[^^^=bbaa]
+word_start_index = int:[19]
+char *word_start_ptr = char *[^^^^=bbaa]
+char *word_start_ptr = char *[^^^=bbaa]
+char *word_start_ptr = char *[^^=bbaa]
+char *word_start_ptr = char *[^=bbaa]
+char *word_start_ptr = char *[=bbaa]
+Word: =bbaa
+return from print_word
+symbol = = , current_prog = =R6 , current_word_index = 4 , status = 5, prog_end = 0 
+call get_current_symbol
+symbol = char:[b] - 98 ascii
+word = b , symbol = b
+return from get_current_symbol
+call get_current_command_index
+j = 0, alphabet[j] = a, symbol = b
+j = 1, alphabet[j] = b, symbol = b
+command_index = int:[1]
+return from get_current_command_index
+current_command_index = int:[1]
+TEST 5 1
+current_prog = char *[bR6]
+call write_new_symbol
+(**word)[4 (current_word_index)] = char:[b]
+return from write_new_symbol
+call move_head
+move_instruction = char:[R]
+*current_word_index = int:[5]
+return from move_head
+call change_status
+TEST status_value = int[6], current_prog[2] = char[6], ascii current_prog[2] =[54]
+command_status = int:[5]
+*status = int:[5]
+return from change_status
+call print_word
+char *word_start_ptr = char *[^^^=bbaa]
+word_start_index = int:[19]
+char *word_start_ptr = char *[^^^^=bbaa]
+char *word_start_ptr = char *[^^^=bbaa]
+char *word_start_ptr = char *[^^=bbaa]
+char *word_start_ptr = char *[^=bbaa]
+char *word_start_ptr = char *[=bbaa]
+Word: =bbaa
+return from print_word
+symbol = b , current_prog = bR6 , current_word_index = 5 , status = 5, prog_end = 0 
+call get_current_symbol
+symbol = char:[b] - 98 ascii
+word = b , symbol = b
+return from get_current_symbol
+call get_current_command_index
+j = 0, alphabet[j] = a, symbol = b
+j = 1, alphabet[j] = b, symbol = b
+command_index = int:[1]
+return from get_current_command_index
+current_command_index = int:[1]
+TEST 5 1
+current_prog = char *[bR6]
+call write_new_symbol
+(**word)[5 (current_word_index)] = char:[b]
+return from write_new_symbol
+call move_head
+move_instruction = char:[R]
+*current_word_index = int:[6]
+return from move_head
+call change_status
+TEST status_value = int[6], current_prog[2] = char[6], ascii current_prog[2] =[54]
+command_status = int:[5]
+*status = int:[5]
+return from change_status
+call print_word
+char *word_start_ptr = char *[^^^=bbaa]
+word_start_index = int:[19]
+char *word_start_ptr = char *[^^^^=bbaa]
+char *word_start_ptr = char *[^^^=bbaa]
+char *word_start_ptr = char *[^^=bbaa]
+char *word_start_ptr = char *[^=bbaa]
+char *word_start_ptr = char *[=bbaa]
+Word: =bbaa
+return from print_word
+symbol = b , current_prog = bR6 , current_word_index = 6 , status = 5, prog_end = 0 
+call get_current_symbol
+symbol = char:[a] - 97 ascii
+word = a , symbol = a
+return from get_current_symbol
+call get_current_command_index
+j = 0, alphabet[j] = a, symbol = a
+command_index = int:[0]
+return from get_current_command_index
+current_command_index = int:[0]
+TEST 5 0
+current_prog = char *[aR6]
+call write_new_symbol
+(**word)[6 (current_word_index)] = char:[a]
+return from write_new_symbol
+call move_head
+move_instruction = char:[R]
+*current_word_index = int:[7]
+return from move_head
+call change_status
+TEST status_value = int[6], current_prog[2] = char[6], ascii current_prog[2] =[54]
+command_status = int:[5]
+*status = int:[5]
+return from change_status
+call print_word
+char *word_start_ptr = char *[^^^=bbaa]
+word_start_index = int:[19]
+char *word_start_ptr = char *[^^^^=bbaa]
+char *word_start_ptr = char *[^^^=bbaa]
+char *word_start_ptr = char *[^^=bbaa]
+char *word_start_ptr = char *[^=bbaa]
+char *word_start_ptr = char *[=bbaa]
+Word: =bbaa
+return from print_word
+symbol = a , current_prog = aR6 , current_word_index = 7 , status = 5, prog_end = 0 
+call get_current_symbol
+symbol = char:[a] - 97 ascii
+word = a , symbol = a
+return from get_current_symbol
+call get_current_command_index
+j = 0, alphabet[j] = a, symbol = a
+command_index = int:[0]
+return from get_current_command_index
+current_command_index = int:[0]
+TEST 5 0
+current_prog = char *[aR6]
+call write_new_symbol
+(**word)[7 (current_word_index)] = char:[a]
+return from write_new_symbol
+call move_head
+move_instruction = char:[R]
+*current_word_index = int:[8]
+return from move_head
+call change_status
+TEST status_value = int[6], current_prog[2] = char[6], ascii current_prog[2] =[54]
+command_status = int:[5]
+*status = int:[5]
+return from change_status
+call print_word
+char *word_start_ptr = char *[^^^=bbaa]
+word_start_index = int:[19]
+char *word_start_ptr = char *[^^^^=bbaa]
+char *word_start_ptr = char *[^^^=bbaa]
+char *word_start_ptr = char *[^^=bbaa]
+char *word_start_ptr = char *[^=bbaa]
+char *word_start_ptr = char *[=bbaa]
+Word: =bbaa
+return from print_word
+symbol = a , current_prog = aR6 , current_word_index = 8 , status = 5, prog_end = 0 
+call get_current_symbol
+symbol = char:[^] - 94 ascii
+word =   , symbol = ^
+return from get_current_symbol
+call get_current_command_index
+j = 0, alphabet[j] = a, symbol = ^
+j = 1, alphabet[j] = b, symbol = ^
+j = 2, alphabet[j] = ^, symbol = ^
+command_index = int:[2]
+return from get_current_command_index
+current_command_index = int:[2]
+TEST 5 2
+current_prog = char *[bR8]
+call write_new_symbol
+(**word)[8 (current_word_index)] = char:[b]
+return from write_new_symbol
+call move_head
+move_instruction = char:[R]
+*current_word_index = int:[9]
+return from move_head
+call change_status
+TEST status_value = int[8], current_prog[2] = char[8], ascii current_prog[2] =[56]
+command_status = int:[7]
+*status = int:[7]
+return from change_status
+call print_word
+char *word_start_ptr = char *[^^^=bbaab]
+word_start_index = int:[19]
+char *word_start_ptr = char *[^^^^=bbaab]
+char *word_start_ptr = char *[^^^=bbaab]
+char *word_start_ptr = char *[^^=bbaab]
+char *word_start_ptr = char *[^=bbaab]
+char *word_start_ptr = char *[=bbaab]
+Word: =bbaab
+return from print_word
+symbol = ^ , current_prog = bR8 , current_word_index = 9 , status = 7, prog_end = 0 
+call get_current_symbol
+symbol = char:[^] - 94 ascii
+word =   , symbol = ^
+return from get_current_symbol
+call get_current_command_index
+j = 0, alphabet[j] = a, symbol = ^
+j = 1, alphabet[j] = b, symbol = ^
+j = 2, alphabet[j] = ^, symbol = ^
+command_index = int:[2]
+return from get_current_command_index
+current_command_index = int:[2]
+TEST 7 2
+current_prog = char *[bL8]
+call write_new_symbol
+(**word)[9 (current_word_index)] = char:[b]
+return from write_new_symbol
+call move_head
+move_instruction = char:[L]
+*current_word_index = int:[8]
+return from move_head
+call change_status
+TEST status_value = int[8], current_prog[2] = char[8], ascii current_prog[2] =[56]
+command_status = int:[7]
+*status = int:[7]
+return from change_status
+call print_word
+char *word_start_ptr = char *[^^^=bbaabb]
+word_start_index = int:[19]
+char *word_start_ptr = char *[^^^^=bbaabb]
+char *word_start_ptr = char *[^^^=bbaabb]
+char *word_start_ptr = char *[^^=bbaabb]
+char *word_start_ptr = char *[^=bbaabb]
+char *word_start_ptr = char *[=bbaabb]
+Word: =bbaabb
+return from print_word
+symbol = ^ , current_prog = bL8 , current_word_index = 8 , status = 7, prog_end = 0 
+call get_current_symbol
+symbol = char:[b] - 98 ascii
+word = b , symbol = b
+return from get_current_symbol
+call get_current_command_index
+j = 0, alphabet[j] = a, symbol = b
+j = 1, alphabet[j] = b, symbol = b
+command_index = int:[1]
+return from get_current_command_index
+current_command_index = int:[1]
+TEST 7 1
+current_prog = char *[bL3]
+call write_new_symbol
+(**word)[8 (current_word_index)] = char:[b]
+return from write_new_symbol
+call move_head
+move_instruction = char:[L]
+*current_word_index = int:[7]
+return from move_head
+call change_status
+TEST status_value = int[3], current_prog[2] = char[3], ascii current_prog[2] =[51]
+command_status = int:[2]
+*status = int:[2]
+return from change_status
+call print_word
+char *word_start_ptr = char *[^^^=bbaabb]
+word_start_index = int:[19]
+char *word_start_ptr = char *[^^^^=bbaabb]
+char *word_start_ptr = char *[^^^=bbaabb]
+char *word_start_ptr = char *[^^=bbaabb]
+char *word_start_ptr = char *[^=bbaabb]
+char *word_start_ptr = char *[=bbaabb]
+Word: =bbaabb
+return from print_word
+symbol = b , current_prog = bL3 , current_word_index = 7 , status = 2, prog_end = 0 
+call get_current_symbol
+symbol = char:[a] - 97 ascii
+word = a , symbol = a
+return from get_current_symbol
+call get_current_command_index
+j = 0, alphabet[j] = a, symbol = a
+command_index = int:[0]
+return from get_current_command_index
+current_command_index = int:[0]
+TEST 2 0
+current_prog = char *[aL3]
+call write_new_symbol
+(**word)[7 (current_word_index)] = char:[a]
+return from write_new_symbol
+call move_head
+move_instruction = char:[L]
+*current_word_index = int:[6]
+return from move_head
+call change_status
+TEST status_value = int[3], current_prog[2] = char[3], ascii current_prog[2] =[51]
+command_status = int:[2]
+*status = int:[2]
+return from change_status
+call print_word
+char *word_start_ptr = char *[^^^=bbaabb]
+word_start_index = int:[19]
+char *word_start_ptr = char *[^^^^=bbaabb]
+char *word_start_ptr = char *[^^^=bbaabb]
+char *word_start_ptr = char *[^^=bbaabb]
+char *word_start_ptr = char *[^=bbaabb]
+char *word_start_ptr = char *[=bbaabb]
+Word: =bbaabb
+return from print_word
+symbol = a , current_prog = aL3 , current_word_index = 6 , status = 2, prog_end = 0 
+call get_current_symbol
+symbol = char:[a] - 97 ascii
+word = a , symbol = a
+return from get_current_symbol
+call get_current_command_index
+j = 0, alphabet[j] = a, symbol = a
+command_index = int:[0]
+return from get_current_command_index
+current_command_index = int:[0]
+TEST 2 0
+current_prog = char *[aL3]
+call write_new_symbol
+(**word)[6 (current_word_index)] = char:[a]
+return from write_new_symbol
+call move_head
+move_instruction = char:[L]
+*current_word_index = int:[5]
+return from move_head
+call change_status
+TEST status_value = int[3], current_prog[2] = char[3], ascii current_prog[2] =[51]
+command_status = int:[2]
+*status = int:[2]
+return from change_status
+call print_word
+char *word_start_ptr = char *[^^^=bbaabb]
+word_start_index = int:[19]
+char *word_start_ptr = char *[^^^^=bbaabb]
+char *word_start_ptr = char *[^^^=bbaabb]
+char *word_start_ptr = char *[^^=bbaabb]
+char *word_start_ptr = char *[^=bbaabb]
+char *word_start_ptr = char *[=bbaabb]
+Word: =bbaabb
+return from print_word
+symbol = a , current_prog = aL3 , current_word_index = 5 , status = 2, prog_end = 0 
+call get_current_symbol
+symbol = char:[b] - 98 ascii
+word = b , symbol = b
+return from get_current_symbol
+call get_current_command_index
+j = 0, alphabet[j] = a, symbol = b
+j = 1, alphabet[j] = b, symbol = b
+command_index = int:[1]
+return from get_current_command_index
+current_command_index = int:[1]
+TEST 2 1
+current_prog = char *[bL3]
+call write_new_symbol
+(**word)[5 (current_word_index)] = char:[b]
+return from write_new_symbol
+call move_head
+move_instruction = char:[L]
+*current_word_index = int:[4]
+return from move_head
+call change_status
+TEST status_value = int[3], current_prog[2] = char[3], ascii current_prog[2] =[51]
+command_status = int:[2]
+*status = int:[2]
+return from change_status
+call print_word
+char *word_start_ptr = char *[^^^=bbaabb]
+word_start_index = int:[19]
+char *word_start_ptr = char *[^^^^=bbaabb]
+char *word_start_ptr = char *[^^^=bbaabb]
+char *word_start_ptr = char *[^^=bbaabb]
+char *word_start_ptr = char *[^=bbaabb]
+char *word_start_ptr = char *[=bbaabb]
+Word: =bbaabb
+return from print_word
+symbol = b , current_prog = bL3 , current_word_index = 4 , status = 2, prog_end = 0 
+call get_current_symbol
+symbol = char:[b] - 98 ascii
+word = b , symbol = b
+return from get_current_symbol
+call get_current_command_index
+j = 0, alphabet[j] = a, symbol = b
+j = 1, alphabet[j] = b, symbol = b
+command_index = int:[1]
+return from get_current_command_index
+current_command_index = int:[1]
+TEST 2 1
+current_prog = char *[bL3]
+call write_new_symbol
+(**word)[4 (current_word_index)] = char:[b]
+return from write_new_symbol
+call move_head
+move_instruction = char:[L]
+*current_word_index = int:[3]
+return from move_head
+call change_status
+TEST status_value = int[3], current_prog[2] = char[3], ascii current_prog[2] =[51]
+command_status = int:[2]
+*status = int:[2]
+return from change_status
+call print_word
+char *word_start_ptr = char *[^^^=bbaabb]
+word_start_index = int:[19]
+char *word_start_ptr = char *[^^^^=bbaabb]
+char *word_start_ptr = char *[^^^=bbaabb]
+char *word_start_ptr = char *[^^=bbaabb]
+char *word_start_ptr = char *[^=bbaabb]
+char *word_start_ptr = char *[=bbaabb]
+Word: =bbaabb
+return from print_word
+symbol = b , current_prog = bL3 , current_word_index = 3 , status = 2, prog_end = 0 
+call get_current_symbol
+symbol = char:[=] - 61 ascii
+word = = , symbol = =
+return from get_current_symbol
+call get_current_command_index
+j = 0, alphabet[j] = a, symbol = =
+j = 1, alphabet[j] = b, symbol = =
+j = 2, alphabet[j] = ^, symbol = =
+j = 3, alphabet[j] = =, symbol = =
+command_index = int:[3]
+return from get_current_command_index
+current_command_index = int:[3]
+TEST 2 3
+current_prog = char *[=L3]
+call write_new_symbol
+(**word)[3 (current_word_index)] = char:[=]
+return from write_new_symbol
+call move_head
+move_instruction = char:[L]
+*current_word_index = int:[2]
+return from move_head
+call change_status
+TEST status_value = int[3], current_prog[2] = char[3], ascii current_prog[2] =[51]
+command_status = int:[2]
+*status = int:[2]
+return from change_status
+call print_word
+char *word_start_ptr = char *[^^^=bbaabb]
+word_start_index = int:[19]
+char *word_start_ptr = char *[^^^^=bbaabb]
+char *word_start_ptr = char *[^^^=bbaabb]
+char *word_start_ptr = char *[^^=bbaabb]
+char *word_start_ptr = char *[^=bbaabb]
+char *word_start_ptr = char *[=bbaabb]
+Word: =bbaabb
+return from print_word
+symbol = = , current_prog = =L3 , current_word_index = 2 , status = 2, prog_end = 0 
+call get_current_symbol
+symbol = char:[^] - 94 ascii
+word = ^ , symbol = ^
+return from get_current_symbol
+call get_current_command_index
+j = 0, alphabet[j] = a, symbol = ^
+j = 1, alphabet[j] = b, symbol = ^
+j = 2, alphabet[j] = ^, symbol = ^
+command_index = int:[2]
+return from get_current_command_index
+current_command_index = int:[2]
+TEST 2 2
+current_prog = char *[^R4]
+call write_new_symbol
+(**word)[2 (current_word_index)] = char:[^]
+return from write_new_symbol
+call move_head
+move_instruction = char:[R]
+*current_word_index = int:[3]
+return from move_head
+call change_status
+TEST status_value = int[4], current_prog[2] = char[4], ascii current_prog[2] =[52]
+command_status = int:[3]
+*status = int:[3]
+return from change_status
+call print_word
+char *word_start_ptr = char *[^^^=bbaabb]
+word_start_index = int:[19]
+char *word_start_ptr = char *[^^^^=bbaabb]
+char *word_start_ptr = char *[^^^=bbaabb]
+char *word_start_ptr = char *[^^=bbaabb]
+char *word_start_ptr = char *[^=bbaabb]
+char *word_start_ptr = char *[=bbaabb]
+Word: =bbaabb
+return from print_word
+symbol = ^ , current_prog = ^R4 , current_word_index = 3 , status = 3, prog_end = 0 
+call get_current_symbol
+symbol = char:[=] - 61 ascii
+word = = , symbol = =
+return from get_current_symbol
+call get_current_command_index
+j = 0, alphabet[j] = a, symbol = =
+j = 1, alphabet[j] = b, symbol = =
+j = 2, alphabet[j] = ^, symbol = =
+j = 3, alphabet[j] = =, symbol = =
+command_index = int:[3]
+return from get_current_command_index
+current_command_index = int:[3]
+TEST 3 3
+current_prog = char *[^R0]
+call write_new_symbol
+(**word)[3 (current_word_index)] = char:[^]
+return from write_new_symbol
+call move_head
+move_instruction = char:[R]
+*current_word_index = int:[4]
+return from move_head
+call change_status
+TEST status_value = int[0], current_prog[2] = char[0], ascii current_prog[2] =[48]
+prog_end = 1
+command_status = int:[0]
+*status = int:[0]
+return from change_status
+call print_word
+char *word_start_ptr = char *[^^^^bbaabb]
+word_start_index = int:[19]
+char *word_start_ptr = char *[^^^^^bbaabb]
+char *word_start_ptr = char *[^^^^bbaabb]
+char *word_start_ptr = char *[^^^bbaabb]
+char *word_start_ptr = char *[^^bbaabb]
+char *word_start_ptr = char *[^bbaabb]
+char *word_start_ptr = char *[bbaabb]
+Word: bbaabb
+return from print_word
+symbol = = , current_prog = ^R0 , current_word_index = 4 , status = 0, prog_end = 1 
+return from execute_prog
+call free_all
+return from free_all
+return from main
+Input word: bab
+Programm:
+  aN2  bN2  ^N0    x
+  aR2  bR2  =L3    x
+  aL3  bL3  ^R4  =L3
+  ^R5  ^R6    x  ^R0
+  aR5  bR5  aR7  =R5
+  aR6  bR6  bR8  =R6
+  aL3    x  aL7    x
+    x  bL3  bL8    x
+Word: bab
+Word: bab
+Word: bab
+Word: bab
+Word: bab=
+Word: bab=
+Word: bab=
+Word: bab=
+Word: bab=
+Word: ab=
+Word: ab=
+Word: ab=
+Word: ab=
+Word: ab=b
+Word: ab=bb
+Word: ab=bb
+Word: ab=bb
+Word: ab=bb
+Word: ab=bb
+Word: ab=bb
+Word: b=bb
+Word: b=bb
+Word: b=bb
+Word: b=bb
+Word: b=bb
+Word: b=bba
+Word: b=bbaa
+Word: b=bbaa
+Word: b=bbaa
+Word: b=bbaa
+Word: b=bbaa
+Word: b=bbaa
+Word: b=bbaa
+Word: =bbaa
+Word: =bbaa
+Word: =bbaa
+Word: =bbaa
+Word: =bbaa
+Word: =bbaa
+Word: =bbaab
+Word: =bbaabb
+Word: =bbaabb
+Word: =bbaabb
+Word: =bbaabb
+Word: =bbaabb
+Word: =bbaabb
+Word: =bbaabb
+Word: =bbaabb
+Word: bbaabb

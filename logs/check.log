@@ -1,0 +1,39 @@
+err = int:[0]
+call fopen( word.txt, r )
+fopen: Success
+word_file = FILE:[file???]
+return from fopen
+call fopen( commands.txt, r )
+fopen: Success
+prog_file = FILE:[file???]
+return from fopen
+call check_prog_size
+width = int:[4]
+height = int:[5]
+return from check_prog_size
+call make_arr
+return from fopen
+call parse_command
+5 chars in a,L,2
+5 chars in b,L,3
+5 chars in c,L,4
+5 chars in ^,N,!
+1 chars in x
+1 chars in x
+1 chars in x
+5 chars in a,R,5
+1 chars in x
+1 chars in x
+1 chars in x
+5 chars in b,R,5
+1 chars in x
+1 chars in x
+1 chars in x
+5 chars in c,R,5
+5 chars in a,N,!
+5 chars in a,N,!
+5 chars in a,N,!
+1 chars in x
+return from parse_command
+call print_prog
+return from print_prog

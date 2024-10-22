@@ -1,0 +1,68 @@
+Input word: bca
+Programm:
+  aL2  bL3  cL4  ^N0
+    x    x    x  aR5
+    x    x    x  bR5
+    x    x    x  cR5
+  aN0  aN0  aN0    x
+Word: bca
+Word: bbca
+Word: baca
+Input word: abcb
+Programm:
+  ^R2  ^R3  ^R4  ^R1
+  aR2  bR2  cR2  aN0
+  aR3  bR3  cR3  bN0
+  aR4  bR4  cR4  cN0
+Word: bcb
+Word: bcb
+Word: bcb
+Word: bcb
+Word: bcba
+Input word: aab
+Programm:
+  aR1  bR1    x    x    x  =L2
+  aL2  bL2    x    x    x  ^R3
+  AR4  BR5  =N0    x    x    x
+  aR4  bR4  =R4    x    x  aN6
+  aR5  bR5  =R5    x    x  bN6
+  aL6  bL6  =L6  aR3  bR3    x
+Word: aab
+Word: aab
+Word: aab
+Word: aab=
+Word: aab=
+Word: aab=
+Word: aab=
+Word: aab=
+Word: Aab=
+Word: Aab=
+Word: Aab=
+Word: Aab=
+Word: Aab=a
+Word: Aab=a
+Word: Aab=a
+Word: Aab=a
+Word: Aab=a
+Word: aab=a
+Word: aAb=a
+Word: aAb=a
+Word: aAb=a
+Word: aAb=a
+Word: aAb=aa
+Word: aAb=aa
+Word: aAb=aa
+Word: aAb=aa
+Word: aAb=aa
+Word: aab=aa
+Word: aaB=aa
+Word: aaB=aa
+Word: aaB=aa
+Word: aaB=aa
+Word: aaB=aab
+Word: aaB=aab
+Word: aaB=aab
+Word: aaB=aab
+Word: aaB=aab
+Word: aab=aab
+Word: aab=aab
